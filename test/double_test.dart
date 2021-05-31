@@ -19,7 +19,7 @@ String _scriptPath() {
 
 void main() {
   group("Should identify doubles and ints", () {
-    final currentDirectory = dirname(_scriptPath());
+    final currentDirectory = dirname(_scriptPath()) + '/test';
 
     test("should parse literals correctly", () {
       expect(isASTLiteralDouble(LiteralNode(1, '1')), isFalse);

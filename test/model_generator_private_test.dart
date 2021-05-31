@@ -17,7 +17,7 @@ String _scriptPath() {
 
 void main() {
   group("model-generator", () {
-    final currentDirectory = dirname(_scriptPath());
+    final currentDirectory = dirname(_scriptPath()) + '/test';
     test("Generated class with private fields should correctly parse JSON", () {
       final jsonPath = normalize(join(currentDirectory, 'test.json'));
       final jsonRawData = new File(jsonPath).readAsStringSync();

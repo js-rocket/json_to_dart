@@ -17,7 +17,7 @@ String _scriptPath() {
 
 void main() {
   group("model-generator", () {
-    final currentDirectory = dirname(_scriptPath());
+    final currentDirectory = dirname(_scriptPath()) + '/test';
 
     test("Should generate the classes to parse the JSON", () {
       final jsonPath = normalize(join(currentDirectory, 'bug_40.json'));

@@ -16,7 +16,7 @@ String _scriptPath() {
 
 void main() {
   group("model-generator-with-warnings", () {
-    final currentDirectory = dirname(_scriptPath());
+    final currentDirectory = dirname(_scriptPath()) + '/test';
     test("should generate proper warnings", () {
       final jsonPath = normalize(join(currentDirectory, 'test_warnings.json'));
       final jsonRawData = new File(jsonPath).readAsStringSync();
